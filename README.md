@@ -1,6 +1,6 @@
 # Smart Screen Display
 # Intro
-Screen refresh rate based on power status.
+Custom screen refresh rate on different power status.
 # Build from source
 ```
 pyinstaller -F "Smart Screen Display.py" --noconsole 
