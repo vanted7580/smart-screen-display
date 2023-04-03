@@ -10,7 +10,11 @@ Custom screen refresh rate on different power status.
 pyinstaller -F "Smart Screen Display.py" --noconsole 
 ```
 
-## Installation & Uninstallation 安装与卸载
+## Issue
+
+配置文件版本有概率在切换刷新率后会自动还原。
+
+## Installation
 
 + Run `install.cmd` or `uninstall.cmd` with administrator privilege to install/uninstall.
 
@@ -18,7 +22,7 @@ pyinstaller -F "Smart Screen Display.py" --noconsole
 
 # Smart Screen Display [Config Version]
 
-## Config 配置文件 
+## Configuration
 
 #### `Smart Screen Display.ini`
 
@@ -29,12 +33,13 @@ ac = 240 #插电刷新率
 ```
 #### 请正确配置刷新率！
 
-## Installation & Uninstallation 安装与卸载
+## Installation
 
-### Set a proper refresh rate in config before installation!
-### 安装前在参数内设置好你的刷新率！
+#### Set a proper refresh rate in config before installation!
 
 + Run `install.cmd` or `uninstall.cmd` with administrator privilege to install/uninstall.
+
+#### 安装前在参数内设置好你的刷新率！
 
 + 运行`install.cmd`进行安装，运行`uninstall.cmd`进行卸载（需要管理员权限）。
 
