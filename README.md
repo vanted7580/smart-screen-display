@@ -16,7 +16,8 @@ pyinstaller -F "Smart Screen Display.py" --noconsole
 
 + 运行`install.cmd`进行安装，运行`uninstall.cmd`进行卸载（需要管理员权限）。
 
-## Config [Smart Screen Display (Config Version)]
+## Config
+#### Smart Screen Display Config Version Only
 
 Set a proper refresh rate in config before installation!
 
