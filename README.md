@@ -12,6 +12,7 @@ pyinstaller -F "Smart Screen Display.py" --noconsole
 ## Config 配置文件 
 ### 请正确配置刷新率！
 #### Smart Screen Display.ini
+#### `Smart Screen Display Config.py` Only
 ```
 [screen]
 dc = 60 #离电刷新率
