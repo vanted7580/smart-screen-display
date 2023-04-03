@@ -1,26 +1,12 @@
-from time import sleep
-
 import win32api
 import ctypes
 from ctypes import wintypes
-import configparser
 
-CONFIG_NAME = 'C:\ProgramData\Smart Screen Display\Smart Screen Display.ini'
 
-config = configparser.ConfigParser()
-screen = {
-    'dc': 60,
-    'ac': 240
+target_rate = {
+    0: 60,
+    1: 240
 }
-config['screen'] = screen
-
-
-def load_conf():
-    if len(config.read(CONFIG_NAME)) == 0:
-        with open(CONFIG_NAME, 'w') as configfile:
-            config.write(configfile)
-    config.read(CONFIG_NAME)
-    return
 
 
 class SYSTEM_POWER_STATUS(ctypes.Structure):
@@ -44,14 +30,5 @@ def get_power_status():
     if not GetSystemPowerStatus(ctypes.pointer(status)):
         return 1
     return status.ACLineStatus
-
-
-load_conf()
-target_rate = {
-    0: screen['dc'],
-    1: screen['ac']
-}
-
-sleep(0.5)
 
 change_display_frequency(target_rate[get_power_status()])
