@@ -21,6 +21,7 @@ SET taskuser="%ComputerName%\%UserName%"
 md %destination%
 copy %program%  %destination%
 schtasks /create /xml %taskxml% /tn %taskname%
+schtasks /run /tn %taskname%
 echo Installed
 
 :end
